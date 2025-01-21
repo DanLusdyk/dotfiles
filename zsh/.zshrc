@@ -46,5 +46,8 @@ zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 # fzf shell integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# exports
+export PATH=$PATH:$HOME/.local/bin
+
 # zoxide
 eval "$(zoxide init zsh)"
