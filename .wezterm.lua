@@ -5,11 +5,10 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.enable_scroll_bar = true
-config.scrollback_lines = 10000
 config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 11.0
 
-config.leader = { key = 's', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = 's', mods = 'CTRL', timeout_milliseconds = 1500 }
 local act = wezterm.action
 config.keys = {
   {
@@ -73,5 +72,17 @@ config.keys = {
     action = act.Search { CaseInSensitiveString = "" },
   },
 }
+
+config.colors = {
+  compose_cursor = 'yellow',
+}
+
+wezterm.on('update-right-status', function(window, pane)
+  local leader = ''
+  if window:leader_is_active() then
+    leader = 'LEADER'
+  end
+  window:set_right_status(leader)
+end)
 
 return config
