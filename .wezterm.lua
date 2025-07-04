@@ -77,6 +77,14 @@ config.colors = {
   compose_cursor = 'yellow',
 }
 
+config.mouse_bindings = {
+  {
+    event = { Up = { streak = 1, button = "Left" } },
+    mods = "NONE",
+    action = wezterm.action.Nop,
+  },
+}
+
 wezterm.on('update-right-status', function(window, pane)
   local leader = ''
   if window:leader_is_active() then
