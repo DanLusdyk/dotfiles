@@ -32,7 +32,7 @@ autoload -Uz colors && colors
 source "$ZDOTDIR/zsh-functions"
 
 # files to source
-zsh_add_file "zsh-vim-mode"
+# zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
