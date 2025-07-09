@@ -83,6 +83,19 @@ config.keys = {
       end),
     },
   },
+  {
+    key = 'LeftArrow',
+    mods = 'OPT',
+    action = act.SendKey {
+      key = 'b',
+      mods = 'ALT',
+    },
+  },
+  {
+    key = 'RightArrow',
+    mods = 'OPT',
+    action = act.SendKey { key = 'f', mods = 'ALT' },
+  },
 }
 
 config.colors = {
