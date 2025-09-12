@@ -100,6 +100,7 @@ config.keys = {
 
 config.colors = {
   compose_cursor = 'yellow',
+  scrollbar_thumb = 'yellow',
 }
 
 config.mouse_bindings = {
