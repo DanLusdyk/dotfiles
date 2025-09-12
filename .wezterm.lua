@@ -118,4 +118,8 @@ wezterm.on('update-right-status', function(window, pane)
   window:set_right_status(leader)
 end)
 
+if wezterm.gui then
+  config.scrollback_lines = 10000
+end
+
 return config
